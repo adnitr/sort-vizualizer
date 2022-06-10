@@ -11,3 +11,46 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.App {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  height: 80vh;
+  align-items: flex-end;
+}
+
+.box {
+  width: 30px;
+  background-color: #111;
+  color: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 10px;
+  backface-visibility: hidden;
+  /* animation: appear 0.3s linear; */
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.translatepos {
+  transform: translateX(40px);
+  transition: all 0.4s cubic-bezier(0.36, 0.3, 0, 0.53);
+}
+
+.translateneg {
+  transform: translateX(-40px);
+  transition: all 0.4s cubic-bezier(0.36, 0.3, 0, 0.53);
+}
+
+.transnull {
+  transform: translate(0);
+}
